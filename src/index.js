@@ -9,9 +9,12 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
    // Create the browser window.
    const mainWindow = new BrowserWindow({
-      frame: false,
+      frame: true,
       fullscreen: true,
+      closable: true,
       title: "Calamian MDs Pharmacy",
+      focusable: true,
+      acceptFirstMouse: true,
       webPreferences: {
          devTools: false,
       },
